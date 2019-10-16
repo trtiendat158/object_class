@@ -20,9 +20,9 @@ namespace Object_Class
         }
 
         public int WithDraw(int amount)
-        {
-            TongTien -= amount;
-            return TongTien;
+        {      
+           TongTien -= amount;      
+           return TongTien;
         }
 
         public int Deposit(int amount)
@@ -43,9 +43,16 @@ namespace Object_Class
             int a = 0;
             if (Int32.TryParse(ADDuser, out a))
             {
-                WithDraw(a);
-                Console.WriteLine(" You have withdraw {0} VND from your account", a);
-            }
+                if(TongTien>a)
+                {
+                    WithDraw(a);
+                    Console.WriteLine(" You have withdraw {0} VND from your account", a);
+                }
+                else
+                {
+                    Console.WriteLine("You don't enough money to withdraw, you need add money");
+                } 
+            }   
             else if (ADDuser.ToUpper().Equals("Q"))
             {
                 Console.Clear();
