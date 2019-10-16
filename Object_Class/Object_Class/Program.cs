@@ -36,9 +36,9 @@ namespace Object_Class
             Console.WriteLine("Your current amount is {0} ", TongTien);
             return TongTien;
         }
-        public void WithDrawUser()
+        public void DepositUser()
         {
-            Console.WriteLine("Please enter the amount you wish to withdraw:     (Press Q to return to menu)");
+            Console.WriteLine("Please enter the amount you want to send:     (Press Q to return to menu)");
             String ADDuser = Console.ReadLine();
             int a = 0;
             if (Int32.TryParse(ADDuser, out a))
@@ -56,15 +56,15 @@ namespace Object_Class
                 Console.WriteLine("Error ! Please enter the amount to be paid");
             }
         }
-        public void DepositUser()
+        public void WithDrawUser()
         {
-            Console.WriteLine("Please enter the amount you want to send:     (Press Q to return to the menu)");
+            Console.WriteLine("Please enter the amount you wish to withdraw:     (Press Q to return to the menu)");
             String ADDuser = Console.ReadLine();
             int a = 0;
             if (Int32.TryParse(ADDuser, out a))
             {
                 Deposit(a);
-                Console.WriteLine(" You have withdrawn {0} VND from your account", a);
+                Console.WriteLine(" You have withdraw {0} VND from your account", a);
             }
             else if (ADDuser.ToUpper().Equals("Q"))
             {

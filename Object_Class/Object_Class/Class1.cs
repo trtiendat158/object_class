@@ -11,7 +11,7 @@ namespace Object_Class
         static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
-            Account ql = new Account(200000);
+            Account ql = new Account(0);
             while (true)
             {
                 ql.Showmenu();
