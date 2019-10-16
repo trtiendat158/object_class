@@ -8,7 +8,7 @@ namespace UnitTestProject1
     public class UnitTestAccount
     {
         [TestMethod]
-        public void TestMethodAccout()
+        public void TestMethod1()
         {
             Account acc = new Account(200000);
 
@@ -16,5 +16,26 @@ namespace UnitTestProject1
             Assert.IsInstanceOfType(acc, typeof(Account));
             Assert.AreEqual(200000, acc.Balance());
         }
+
+        [TestMethod]
+        public void TestWithdraw()
+        {
+            Account acc = new Account(200000);
+            Assert.IsNotNull(acc);
+            Assert.IsInstanceOfType(acc, typeof(Account));
+            Assert.AreEqual(400000, acc.WithDraw(200000));
+        }
+
+        [TestMethod]
+        public void TestWithDeposit()
+        {
+            Account acc = new Account(200000);
+
+            Assert.IsNotNull(acc);
+            Assert.IsInstanceOfType(acc, typeof(Account));
+            Assert.AreEqual(100000, acc.Deposit(100000));
+        }
+
+
     }
 }
