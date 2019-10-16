@@ -23,7 +23,7 @@ namespace UnitTestProject1
             Account acc = new Account(200000);
             Assert.IsNotNull(acc);
             Assert.IsInstanceOfType(acc, typeof(Account));
-            Assert.AreEqual(400000, acc.WithDraw(200000));
+            Assert.AreEqual(100000, acc.WithDraw(100000));
         }
 
         [TestMethod]
@@ -33,7 +33,7 @@ namespace UnitTestProject1
 
             Assert.IsNotNull(acc);
             Assert.IsInstanceOfType(acc, typeof(Account));
-            Assert.AreEqual(100000, acc.Deposit(100000));
+            Assert.AreEqual(400000, acc.Deposit(200000));
         }
 
 

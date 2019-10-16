@@ -21,13 +21,13 @@ namespace Object_Class
 
         public int WithDraw(int amount)
         {
-            TongTien += amount;
+            TongTien -= amount;
             return TongTien;
         }
 
         public int Deposit(int amount)
         {
-            TongTien -= amount;
+            TongTien += amount;
             return TongTien;
         }
 
@@ -36,15 +36,15 @@ namespace Object_Class
             Console.WriteLine("Your current amount is {0} ", TongTien);
             return TongTien;
         }
-        public void DepositUser()
+        public void WithDrawUser()
         {
-            Console.WriteLine("Please enter the amount you want to send:     (Press Q to return to menu)");
+            Console.WriteLine("Please enter the amount you wish to withdraw:     (Press Q to return to menu)");
             String ADDuser = Console.ReadLine();
             int a = 0;
             if (Int32.TryParse(ADDuser, out a))
             {
                 WithDraw(a);
-                Console.WriteLine(" You have added {0} to your account", a);
+                Console.WriteLine(" You have withdraw {0} VND from your account", a);
             }
             else if (ADDuser.ToUpper().Equals("Q"))
             {
@@ -56,15 +56,15 @@ namespace Object_Class
                 Console.WriteLine("Error ! Please enter the amount to be paid");
             }
         }
-        public void WithDrawUser()
+        public void DepositUser()
         {
-            Console.WriteLine("Please enter the amount you wish to withdraw:     (Press Q to return to the menu)");
+            Console.WriteLine("Please enter the amount you want to send:     (Press Q to return to the menu)");
             String ADDuser = Console.ReadLine();
             int a = 0;
             if (Int32.TryParse(ADDuser, out a))
             {
                 Deposit(a);
-                Console.WriteLine(" You have withdraw {0} VND from your account", a);
+                Console.WriteLine("You have added {0} to your account ", a);
             }
             else if (ADDuser.ToUpper().Equals("Q"))
             {
@@ -81,9 +81,9 @@ namespace Object_Class
             Console.WriteLine("==================================================");
             Console.WriteLine("\t BANK ACCOUNT MANAGEMENT"
                 + Environment.NewLine
-                + "1. WithDraw"
+                + "1. Deposit"
                 + Environment.NewLine
-                + "2. Deposit"
+                + "2. Withdraw"
                 + Environment.NewLine
                 + "3. Balance");
             Console.Write("Choose: ");
@@ -96,11 +96,11 @@ namespace Object_Class
                 {
                     case 1:
                         Console.WriteLine("You have choose DrawUser on your Account");
-                        WithDrawUser();
+                        DepositUser();
                         break;
                     case 2:
-                        Console.WriteLine("You have choose Deposit on your Account");
-                        DepositUser();
+                        Console.WriteLine("You have choose Deposit on your Account");   
+                        WithDrawUser();
                         break;
                     case 3:
                         Console.WriteLine("You have choose Banlance on your Account");
