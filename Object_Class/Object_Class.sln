@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pickballs", "Pickballs\Pick
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{F3B8EF28-0666-4322-87B3-88BC1830B80C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise_06", "Exercise_06\Exercise_06.csproj", "{FC8A07AB-3C3C-43EC-8980-8C7AF3C98E0B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F3B8EF28-0666-4322-87B3-88BC1830B80C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3B8EF28-0666-4322-87B3-88BC1830B80C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3B8EF28-0666-4322-87B3-88BC1830B80C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC8A07AB-3C3C-43EC-8980-8C7AF3C98E0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC8A07AB-3C3C-43EC-8980-8C7AF3C98E0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC8A07AB-3C3C-43EC-8980-8C7AF3C98E0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC8A07AB-3C3C-43EC-8980-8C7AF3C98E0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
