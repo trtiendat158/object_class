@@ -9,13 +9,15 @@ namespace Exercise_06
 {
     class MyQueue
     {
-        int Length = 10;
-        int top = 0;
-        int[] array = new int[10];
-        int a = 0;
-        int i = 0;
-        public int count;
+       
+        int top;
+        int[] array;
+        int i;
 
+        public MyQueue(int size)
+        {
+            array = new int[size];
+        }
         public bool IsEmpty()
         {
             return top == -1 ? true : false;
@@ -23,7 +25,7 @@ namespace Exercise_06
 
         public bool IsFull()
         {
-            return top == Length ? true : false;
+            return top == array.Length-1 ? true : false;
         }
 
 
@@ -31,11 +33,9 @@ namespace Exercise_06
         {
             if (IsFull() == true)
             {
-                Console.WriteLine("ko thể Enqueue thêm");
                 return;
             }
-            top++;
-            count = top;
+            top++;           
             array[top] = item;
         }
 
@@ -43,19 +43,26 @@ namespace Exercise_06
         {
             if (IsEmpty() == true)
             {
-                Console.WriteLine("ko thể xóa thêm");
                 throw new IndexOutOfRangeException();
             }
-            a = array[i + 1];
             i++;
             top--;
-            count = top;
-            return a;
+            return array[i+1];
         }
 
         public int Peek()
         {
             return (int)array[i];
+        }
+
+        public int Count()
+        {
+            int Count;
+            return Count = top + 1;
+        }
+        public void Clear()
+        {
+            top = -1;
         }
 
     }
