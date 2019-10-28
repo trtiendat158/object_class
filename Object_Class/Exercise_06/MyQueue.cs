@@ -9,61 +9,40 @@ namespace Exercise_06
 {
     class MyQueue
     {
-       
-        int top;
-        int[] array;
-        int i;
+
+        int top=-1, i, length;
+        string[] array;
 
         public MyQueue(int size)
         {
-            array = new int[size];
-        }
-        public bool IsEmpty()
-        {
-            return top == -1 ? true : false;
+            array = new string[size];
         }
 
-        public bool IsFull()
-        {
-            return top == array.Length-1 ? true : false;
+        public void EnQueue(string item)
+        {   
+            array[top + 1] = item;
+            top++;
+            length = top + 1;
         }
 
-
-        public void Enqueue(int item)
+        public string DeQueue()
         {
-            if (IsFull() == true)
-            {
-                return;
-            }
-            top++;           
-            array[top] = item;
-        }
-
-        public int Dequeue()
-        {
-            if (IsEmpty() == true)
-            {
-                throw new IndexOutOfRangeException();
-            }
+            string a = array[i];
             i++;
-            top--;
-            return array[i+1];
+            top++;
+            length = top - i;
+            return a;
         }
 
-        public int Peek()
+        public string Peek()
         {
-            return (int)array[i];
+            return array[i];
         }
 
-        public int Count()
+        public int count()
         {
-            int Count;
-            return Count = top + 1;
+            return length ;
         }
-        public void Clear()
-        {
-            top = -1;
-        }
-
+        
     }
 }
